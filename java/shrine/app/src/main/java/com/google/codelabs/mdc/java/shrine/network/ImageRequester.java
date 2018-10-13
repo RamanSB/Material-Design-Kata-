@@ -27,7 +27,7 @@ public class ImageRequester {
         this.requestQueue.start();
         this.maxByteSize = calculateMaxByteSize();
         this.imageLoader =
-                new ImageLoader(    
+                new ImageLoader(
                         requestQueue,
                         new ImageLoader.ImageCache() {
                             private final LruCache<String, Bitmap> lruCache =

@@ -58,6 +58,6 @@ public class LoginFragment extends Fragment {
         authentication of the username and password.
      */
     private boolean isPasswordValid(@Nullable Editable text) {
-        return text != null && text.length() >= 8;
+        return text != null && text.length() >= 0;
     }
 }
