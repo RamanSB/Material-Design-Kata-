@@ -33,7 +33,10 @@ public class ProductCardRecyclerViewAdapter extends RecyclerView.Adapter<Product
 
     @Override
     public void onBindViewHolder(@NonNull ProductCardViewHolder holder, int position) {
-        // TODO: Put ViewHolder binding code here in MDC-102
+        ProductEntry currentProd = productList.get(position);
+        holder.productPrice.setText(currentProd.title);
+        holder.productTitle.setText(currentProd.price);
+        imageRequester.setImageFromUrl(holder.productImage, currentProd.url);
     }
 
     @Override
